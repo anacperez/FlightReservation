@@ -30,7 +30,9 @@ import com.example.anarts6.airplaneticketreservation.R;
 
 import org.w3c.dom.Text;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -86,6 +88,7 @@ public class ReserveSeat extends Activity implements View.OnClickListener{
 
 
                 flightPurchased = new Flight();
+               // flightPurchased.setUsername();
                 flightPurchased.setFlightNumber(((TextView) v.findViewById(R.id.flightNo)).getText().toString());
                 flightPurchased.setDepartureTime(((TextView)v.findViewById(R.id.departureTimeID)).getText().toString());
                 flightPurchased.setDeparture(((TextView)v.findViewById(R.id.departureID)).getText().toString());
@@ -107,13 +110,18 @@ public class ReserveSeat extends Activity implements View.OnClickListener{
                             inputPassword = cinPassword.getText().toString();
                             boolean validLogin = verifyLogin(inputUsername, inputPassword);
                             if(validLogin){
+                                flightPurchased.setUsername(inputUsername);
                                 AlertDialog.Builder dialogConfirm = new AlertDialog.Builder(ReserveSeat.this);
                                 dialogConfirm.setMessage(String.valueOf(flightPurchased));
                                 // dialogConfirm.setContentView(R.layout.reserve_seat_confirmation);
                                 dialogConfirm.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
-
+                                        db.getWritableDatabase();
+                                        String time = timeStap();
+                                        //(String username, String flightNo, String departure, String arrival, String departureTime, int numTickets, double total, String transactionType, String dateTime)
+                                        db.addTransaction(flightPurchased.getUsername(), flightPurchased.getFlightNumber(), flightPurchased.getDeparture(), flightPurchased.getArrival(), flightPurchased.getDepartureTime(),
+                                                 flightPurchased.getTicketAmount(), flightPurchased.getTotal(), "Reserve Seat",time);
                                     }
                                 });
                                 dialogConfirm.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
@@ -195,5 +203,9 @@ public class ReserveSeat extends Activity implements View.OnClickListener{
         }
         return false;
 
+    }
+    public String timeStap(){
+        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.hh.mm.ss").format(new Date());
+        return timeStamp;
     }
 }

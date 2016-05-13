@@ -86,6 +86,24 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         //create fresh new accounts table
         this.onCreate(db);
     }
+    public void addTransaction(String username, String flightNo, String departure, String arrival, String departureTime, int numTickets, double total, String transactionType, String dateTime){
+
+        Log.d(TAG, "addTransaction()-" + username +" " + flightNo +" " + departure +" " + arrival +" " + departureTime +" " + numTickets +" " + total +" " + transactionType +" " + dateTime);
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(KEY_USERNAME2, username);
+        values.put(KEY_FLIGHTNO, flightNo);
+        values.put(KEY_DEPARTURE2, departure);
+        values.put(KEY_DEPARTURE_TIME, departureTime);
+        values.put(KEY_ARRIVAL, arrival);
+        values.put(KEY_NUM_TICKETS, numTickets);
+        values.put(KEY_TOTAL, total);
+        values.put(KEY_TRANSACTION_TYPE, transactionType);
+        values.put(KEY_DATE_TIME, dateTime);
+
+        db.insert(TABLE_TRANSACTIONS, null, values);
+        db.close();
+    }
 
     public void addAccount(Account account){
         Log.d(TAG, "addAccount() - " + account.toString());

@@ -28,6 +28,7 @@ public class Flight {
 
     }
     public void setUsername(String username){this.username = username;}
+    public String getUsername(){return this.username;}
     public void setFlightNumber(String flightNumber){
         this.flightNumber = flightNumber;
     }
@@ -55,6 +56,8 @@ public class Flight {
     public int getCapacity() {return this.capacity;}
     public String getId(){return this.id;}
     public void setTicketAmount(int ticketAmount){this.ticketAmount = ticketAmount;}
+    public int getTicketAmount(){return this.ticketAmount;}
+    public double getTotal(){return  this.total;}
     public void setTotal(){
         calcTotal(price, ticketAmount);
     }
