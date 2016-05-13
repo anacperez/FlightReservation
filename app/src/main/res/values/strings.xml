@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AirplaneTicketReservation</string>
+    <string name="ReserveSeatButton">Reserve Seat</string>
+    <string name="CancelReservationButton">Cancel Reservation</string>
+    <string name="ManageSystemButton">Manage System</string>
+    <string name="CreateAccountButton">Create Account</string>
+    <string name="EnterUsername_Label"></string>
+    <string name="EnterPassword_Label"></string>
+    <string name="DoneButton">Done</string>
+    <string name="EnterDeparture_Label"></string>
+    <string name="EnterTicketAmount_Label"></string>
+    <string name="EnterArrival_Label"></string>
+    <string name="SubmitEntry">search</string>
+    <string name="loginButton">login</string>
+</resources>

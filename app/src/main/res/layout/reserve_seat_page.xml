@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/departureEntry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter departure location"
+            android:text="@string/EnterDeparture_Label"/>
+
+        <EditText
+            android:id="@+id/arrivalEntry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/departureEntry"
+            android:hint="enter arrival location"
+            android:text="@string/EnterArrival_Label"/>
+        <EditText
+            android:id="@+id/ticketAmountEntry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/arrivalEntry"
+            android:hint="enter ticket amount"
+            android:text="@string/EnterTicketAmount_Label"/>
+        <Button
+            android:id="@+id/SearchButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ticketAmountEntry"
+            android:text="@string/SubmitEntry"/>
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_below="@+id/SearchButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+</RelativeLayout>

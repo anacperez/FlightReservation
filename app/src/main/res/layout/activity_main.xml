@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="30dip">
+
+    <Button
+        android:id="@+id/ReserveSeatButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ReserveSeatButton" />
+
+    <Button
+        android:id="@+id/CancelReservationButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/CancelReservationButton"/>
+    <Button
+        android:id="@+id/ManageSystemButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ManageSystemButton"/>
+    <Button
+        android:id="@+id/CreateAccountButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/CreateAccountButton"/>
+
+</LinearLayout>
+

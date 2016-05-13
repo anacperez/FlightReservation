@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="25sp"
+        android:layout_height="50dp"
+        android:text="Flight Confirmation"
+        android:textStyle="bold"
+        android:id="@+id/confirmDialog" />
+    <TextView
+        android:layout_width="match_parent"
+        android:textSize="25sp"
+        android:layout_height="50dp"
+        android:text="Flight Information"
+        android:id="@+id/confirmPurchase" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="confirm purchase"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cancel purchase"/>/>
+</LinearLayout>

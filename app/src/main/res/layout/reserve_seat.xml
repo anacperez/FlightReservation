@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/flightNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="flightNo"
+        android:textAppearance="?android:textAppearanceLarge" />
+    <TextView
+        android:id="@+id/departureID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="departureID"
+        android:textAppearance="?android:textAppearanceLarge" />
+    <TextView
+        android:id="@+id/arrivalID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="arrivalID"
+        android:textAppearance="?android:textAppearanceLarge" />
+    <TextView
+        android:id="@+id/departureTimeID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="departureTimeID"
+        android:textAppearance="?android:textAppearanceLarge" />
+    <TextView
+        android:id="@+id/priceID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="priceID"
+        android:textAppearance="?android:textAppearanceLarge" />
+    <TextView
+        android:id="@+id/capacityID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="capacityID"
+        android:textAppearance="?android:textAppearanceLarge" />
+
+</LinearLayout>
